@@ -28,6 +28,13 @@ jobs:
           input_string: "${{ github.ref }}"
           version_extractor_regex: '\/v(.*)$'
 
+      - name: Parse Version 2
+        id: version2
+        uses: doptools/action-parse-semver@main
+        with:
+          version: "${{ github.ref }}"
+          versionRegex: '\/v(.*)$'
+
       - name: Config
         id: config
         run: |
