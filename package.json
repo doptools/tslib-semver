@@ -21,7 +21,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --theme minimal src",
     "start": "rollup -c rollup.config.ts -w",
-    "exec": "ts-node ./src/index.ts"
+    "exec": "ts-node ./src/tslib-semver.ts"
   },
   "bugs": {
     "url": "https://github.com/doptools/tslib-semver/issues"
