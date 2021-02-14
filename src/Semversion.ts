@@ -1,4 +1,4 @@
-import semver, { SemVer } from 'semver';
+import semver, { SemVer, clean } from 'semver';
 
 export class Semversion {
     private readonly _version: SemVer | null;
@@ -16,7 +16,9 @@ export class Semversion {
     }
 
     public get version(): string | undefined {
-        return this._version?.version;
+        if(this.isValid){
+            return clean(this._version!.version) ?? undefined;
+        }
     }
 
     public get full(): string | undefined {
