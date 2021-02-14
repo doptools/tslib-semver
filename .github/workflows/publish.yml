@@ -19,7 +19,7 @@ jobs:
           node-version: "14"
           registry-url: https://npm.pkg.github.com/
           always-auth: true
-          scope: "cpbuildtools"
+          scope: "doptools"
 
       - name: Parse Version
         id: version
