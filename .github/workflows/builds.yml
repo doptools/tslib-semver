@@ -19,6 +19,13 @@ jobs:
         with:
           node-version: "14"
 
+      - name: Parse Version 2
+        id: version2
+        uses: doptools/action-parse-semver@main
+        with:
+          version: "${{ github.ref }}"
+          versionRegex: '\/v(.*)$'
+
       - name: Install
         run: yarn install
 
